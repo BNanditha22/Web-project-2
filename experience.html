@@ -1,0 +1,140 @@
+<html>
+
+<head>
+  <title>Experience</title>
+  <link rel="stylesheet" href="style.css" id="light-theme">
+  <link rel="stylesheet" href="dark-mode.css" id="dark-theme">
+
+</head>
+<body>
+    <nav>
+      <ul>
+        <li><a href="index.html" target="_blank" >Home</a></li>
+        <li><a href="contact.html" target="_blank" >Contact</a></li>
+        <li><a href="#" id="toggle-mode">Toggle Mode</a></li>
+      </ul>
+    </nav>
+    <center>
+        <section id="experience">
+            <center>
+              <h2>Work/Volunteer Experience</h2>
+            </center>
+      
+            <!-- Internship details -->
+            <h3>Internship at Maven Silicon Softech Ltd</h3>
+            <!-- Add more points as needed -->
+            <div class="experience-entry" onclick="showExperienceDetails('internship')">
+              <p>Specializing in AHB2APB Bridge RTL design using Verilog HDL.</p>
+              <center>
+                <img src="silicon.jpeg" height="400" width="300" alt="Silicon Image">
+              </center>
+            </div>
+
+            <!-- Organizer details -->
+      <h3>Organizer at FEMFLARE-2020</h3>
+      <!-- Add more points as needed -->
+
+      <div class="experience-entry" onclick="showExperienceDetails('organizer')">
+        <p>Actively contributed to the organization of the Intercollegiate Female Festival (FEMFLARE)-2020 as an
+          organizer on 7th March 2020. This event, orchestrated by the Women's Forum at KLEF in Vijayawada, Andhra
+          Pradesh, showcased my commitment to successful event management.</p>
+        <br>
+        <center>
+          <img src="femflare.jpeg" height="400" width="300" alt="Femflare Image">
+        </center>
+      </div>
+
+      <!-- Experience details modal -->
+      <div id="experience-details-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeExperienceDetailsModal()">&times;</span>
+          <h2 id="experience-title"></h2>
+          <p id="experience-details"></p>
+        </div>
+      </div>
+      </section>
+    </center>
+    <script src="script.js" defer></script>
+    <script>
+         // Function to show experience details in modal
+      function showExperienceDetails(experienceType) {
+        const experienceDetailsModal = document.getElementById('experience-details-modal');
+        const experienceTitle = document.getElementById('experience-title');
+        const experienceDetails = document.getElementById('experience-details');
+
+        // Set content based on the experience type
+        if (experienceType === 'internship') {
+          experienceTitle.textContent = 'Internship at Maven Silicon Softech Ltd';
+          setInternshipDetails(experienceDetails);
+        } else if (experienceType === 'organizer') {
+          experienceTitle.textContent = 'Organizer at FEMFLARE-2020';
+          setOrganizerDetails(experienceDetails);
+        }
+
+        experienceDetailsModal.style.display = 'block';
+      }
+
+      // Function to close the experience details modal
+      function closeExperienceDetailsModal() {
+        const experienceDetailsModal = document.getElementById('experience-details-modal');
+        experienceDetailsModal.style.display = 'none';
+      }
+
+      // Function to set Internship details dynamically
+      function setInternshipDetails(detailsContainer) {
+        // Internship details code
+      }
+
+      // Function to set Organizer details dynamically
+      function setOrganizerDetails(detailsContainer) {
+        // Organizer details code
+      }
+
+      // Function to show experience details in modal
+      function showExperienceDetails(experienceType) {
+        const experienceDetailsModal = document.getElementById('experience-details-modal');
+        const experienceTitle = document.getElementById('experience-title');
+        const experienceDetails = document.getElementById('experience-details');
+
+        // Set content based on the experience type
+        if (experienceType === 'internship') {
+          experienceTitle.textContent = 'Internship at Maven Silicon Softech Ltd';
+          setInternshipDetails(experienceDetails);
+        } else if (experienceType === 'organizer') {
+          experienceTitle.textContent = 'Organizer at FEMFLARE-2020';
+          setOrganizerDetails(experienceDetails);
+        }
+
+        experienceDetailsModal.style.display = 'block';
+      }
+
+      // Function to close the experience details modal
+      function closeExperienceDetailsModal() {
+        const experienceDetailsModal = document.getElementById('experience-details-modal');
+        experienceDetailsModal.style.display = 'none';
+      }
+
+      // Function to set Internship details dynamically
+      function setInternshipDetails(detailsContainer) {
+        detailsContainer.innerHTML =
+          '<p><strong>Time Worked:</strong> [May 12, 2021] - [June 25, 2021]</p>' +
+          '<p><strong>Role:</strong> RTL Design Intern</p>' +
+          '<p><strong>Description:</strong> Specializing in AHB2APB Bridge RTL design using Verilog HDL.</p>' +
+          '<ul>' +
+          '<li>Applied theoretical knowledge to real-world scenarios by actively participating in the AHB2APB Bridge RTL design project using Verilog HDL.</li>' +
+          '<li>Played a key role in the development of the AHB2APB Bridge RTL design, showcasing proficiency in Verilog HDL and contributing to the successful implementation of the project.</li>' +
+          '</ul>';
+      }
+
+      // Function to set Organizer details dynamically
+      function setOrganizerDetails(detailsContainer) {
+        detailsContainer.innerHTML =
+          '<p><strong>Time Worked:</strong> 7th March 2020</p>' +
+          '<p><strong>Role:</strong> Organizer</p>' +
+          '<ul>' +
+          '<li>Actively participated in the Housie event during the Intercollegiate Female Festival (FemFlare)-2K20, organized by the Women\'s Forum at KLEF.</li>' +
+          '<li>Demonstrated enthusiasm, teamwork, and strong interpersonal skills while engaging in the Housie activity, contributing to the vibrant and inclusive atmosphere of the festival.</li>' +
+          '</ul>';
+      }
+    </script>
+    </body>

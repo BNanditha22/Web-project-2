@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Your Portfolio</title>
+  <link rel="stylesheet" href="style.css" id="light-theme">
+  <link rel="stylesheet" href="dark-mode.css" id="dark-theme">
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="experience.html" target="_blank">Experience</a></li>
+      <li><a href="contact.html" target="_blank">Contact</a></li>
+      <li><a href="#" id="toggle-mode">Toggle Mode</a></li>
+    </ul>
+  </nav>
+
+  <div id="content">
+    <!-- Home Page -->
+    <section id="home">
+      <h1>Welcome to My Portfolio</h1>
+      <img src="pic.jpeg" alt="Your Image" id="profile-image" onclick="showDetails()">
+
+      <div id="details-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2>Nanditha Bandi</h2>
+          <ul>
+            <li>
+              I'm currently pursuing an MS in Computer Science at Saint Louis University,
+              set to graduate in 2025. I hold a BTech in Electronics and Communication
+              Engineering from KL Deemed University.
+            </li>
+            <li>
+              In my leisure, I indulge in movies and dramas, finding joy in cinematic
+              experiences. Additionally, I relish weekend trips with friends, creating
+              memorable moments and fostering strong connections.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <br>
+
+    <!-- Education History -->
+    <section id="education">
+      <center>
+        <h2>Education History</h2>
+      </center>
+
+      <div class="education-entry">
+        <h3>Masters of Science In Computer Science</h3>
+        <p><strong>Period:</strong> 2023-2025</p>
+        <p><strong>University:</strong> Saint Louis University</p>
+        <p><strong>Location:</strong> St. Louis, Missouri</p>
+      </div>
+
+      <!-- Other education entries go here -->
+      <div class="education-entry">
+        <h3>Bachelor of Technology, Electronics and Communication Engineering</h3>
+        <p><strong>Period:</strong> 2019-2023</p>
+        <p><strong>University:</strong> KL Deemed to be University</p>
+        <p><strong>Location:</strong> Vaddeswaram, Andhra Pradesh</p>
+      </div>
+
+      <div class="education-entry">
+        <h3>Board Of Intermediate Education AP- MPC</h3>
+        <p><strong>Period:</strong> 2017-2019</p>
+        <p><strong>College:</strong> SRI CHAITANYA JUNIOR COLLEGE</p>
+      </div>
+
+      <div class="education-entry">
+        <h3>Andhra Pradesh Board of Secondary Education</h3>
+        <p><strong>Period:</strong> 2016-2017</p>
+        <p><strong>School:</strong> Rushi Vidya Sadan</p>
+      </div>
+
+    </section>
+    <br>
+    <!-- Work/Volunteer Experience -->
+    <section id="experience">
+      <center>
+        <h2>Work/Volunteer Experience</h2>
+      </center>
+
+      <!-- Internship details -->
+      <h3>Internship at Maven Silicon Softech Ltd</h3>
+      <!-- Add more points as needed -->
+      <div class="experience-entry" onclick="showExperienceDetails('internship')">
+        <p>Specializing in AHB2APB Bridge RTL design using Verilog HDL.</p>
+        <center>
+          <img src="silicon.jpeg" height="400" width="300" alt="Silicon Image">
+        </center>
+      </div>
+      <script src="script.js" defer></script>
+    <script>
+
+      // JavaScript functions to handle modal display
+      function showDetails() {
+        const modal = document.getElementById('details-modal');
+        modal.style.display = 'block';
+      }
+
+      function closeModal() {
+        const modal = document.getElementById('details-modal');
+        modal.style.display = 'none';
+      }
+
+      // Close modal if the user clicks outside the modal
+      window.onclick = function (event) {
+        const modal = document.getElementById('details-modal');
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      };
+    </script>
+</body>
+
+</html>

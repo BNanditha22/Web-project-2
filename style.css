@@ -1,0 +1,198 @@
+/* Reset some default styles */
+body, h1, h2, p, ul, li, form {
+  margin: 0;
+  padding: 0;
+  background-image: url(backgroundimage2.jpeg);
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  background-color: white;
+  color: black;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 1;
+  width: 100%;
+  background-color: gray;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin-right: 100px;
+  font-family: Times New Roman;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: orange;
+}
+
+#content {
+  max-width: 800px;
+  margin: 80px auto 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 20px black;
+}
+
+h1, h2, h3, h4 {
+  color: black;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  font-family: 'Arial', sans-serif;
+}
+
+h3 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  font-family: Copperplate;
+}
+
+h4 {
+  font-size: medium;
+  font-family: Copperplate;
+}
+
+ul {
+  font-family: 'Courier New', monospace;
+}
+
+p {
+  font-family: Courier New;
+  background-color: white;
+  color: black;
+  padding: 10px; /* Add padding for better visibility */
+  border-radius: 5px; /* Add border-radius for a slightly rounded appearance */
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  max-width: 400px;
+  border-radius: 5px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: gray;
+}
+
+.close:hover {
+  color: gray;
+}
+
+form {
+  margin-top: 20px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px black;
+}
+
+label, input, textarea {
+  display: block;
+  margin-bottom: 15px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 12px;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+
+input[type="submit"]:hover {
+  background-color: black;
+}
+
+#profile-image {
+  cursor: pointer;
+  border-radius: 50%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: block;
+}
+
+.contact-container, .education-entry, .work-experience-container, .experience-entry {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px black;
+  margin-top: 20px;
+}
+
+.experience-entry {
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.experience-entry img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
